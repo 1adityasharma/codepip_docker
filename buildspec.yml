@@ -6,10 +6,10 @@ phases:
       - $(aws ecr get-login --no-include-email --region $AWS_DEFAULT_REGION)
   build:
     commands:
-      - echo Build started on `date`
-      - echo Building the Docker image...
-      - docker build -t  web:1 .
-     docker tag web:1 212459589997.dkr.ecr.us-east-1.amazonaws.com/test-ecr:latest
+      - echo "Build started on `date`"
+      - echo "Building the Docker image..."
+      - docker build -t web:1 .
+      - docker tag web:1 212459589997.dkr.ecr.us-east-1.amazonaws.com/test-ecr:latest
   post_build:
     commands:
       - echo Build completed on `date`
