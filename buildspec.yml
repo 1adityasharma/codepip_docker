@@ -12,6 +12,6 @@ phases:
       - docker tag web:1 212459589997.dkr.ecr.us-east-1.amazonaws.com/test-ecr:latest
   post_build:
     commands:
-      - echo Build completed on `date`
-      - echo Pushing the Docker image...
-     docker push 212459589997.dkr.ecr.us-east-1.amazonaws.com/test-ecr:latest
+      - echo "Build completed on `date`"
+      - echo "Pushing the Docker image..."
+      - docker push 212459589997.dkr.ecr.us-east-1.amazonaws.com/test-ecr:latest
